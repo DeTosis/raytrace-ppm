@@ -1,4 +1,5 @@
 #pragma once
+#include <unordered_set>
 #include "types.hpp"
 
 class Image;
@@ -6,15 +7,14 @@ class Pixel;
 
 class Figure {
 private:
-	ui32 m_size = 0;
-	Pixel** m_used_pixels;
+	std::unordered_set<ui32vec2> m_used_pixels;
 protected:
 	Image* r_img;
 	ui32vec2 r_box_size;
 	ui32vec2 r_origin;
 	Color r_color;
 	
-	void add_pixel(int32_t x, int32_t y);
+	void add_pixel(ui32 x, ui32 y);
 public:
 	Figure(
 		Image *img, ui32vec2 box_size, 

@@ -1,4 +1,6 @@
 #pragma once
+#include <string>
+#include <functional>
 #include <cstdint>
 #include <fstream>
 
@@ -28,5 +30,20 @@ public:
 struct ui32vec2 {
 public:
 	ui32 x, y;
+	
+	bool operator==(const ui32vec2& other) const noexcept {
+		return x == other.x && y == other.y;
+	};
+};
 
+namespace std {
+	template<>
+	struct hash<ui32vec2> {
+		std::size_t operator()(const ui32vec2& s) const noexcept {
+			std::size_t h1 = std::hash<std::string>{}(std::to_string(s.x));
+			std::size_t h2 = std::hash<std::string>{}(std::to_string(s.y));
+
+			return h1 ^ (h2 << 1);
+		};
+	};
 };

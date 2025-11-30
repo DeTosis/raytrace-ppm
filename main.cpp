@@ -37,5 +37,7 @@ int main(){
 	std::cout << "Execution time: " << seconds << "s" << std::endl;
 	std::cout << "Rays casted: " << rayc << std::endl;
 	std::cout << "Average time per ray cast: " << (float)seconds / (float)rayc << std::endl;
+
+	Rect origin(&image, {5,5}, {500, 500}, {255,0,0});
 	image.save();
 };
