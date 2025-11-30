@@ -1,5 +1,4 @@
 #include "image.hpp"
-#include "figures.hpp"
 
 Image::Image(const char* f_name, uint32_t width, 
 		uint32_t height) {
@@ -24,7 +23,7 @@ void Image::init() {
 	};
 };
 
-void Image::save(const char* path) stdio{
+void Image::save(const char* path) {
 	std::string f_path = std::string(path) + m_fname + ".ppm"; 
 	std::ofstream ofs(f_path, std::ios::binary);
 	if (!ofs) {

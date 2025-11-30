@@ -1,4 +1,5 @@
 #include "figures.hpp"
+#include "image.hpp"
 
 void Figure::add_pixel(int32_t x, int32_t y) {
 	m_used_pixels[m_size] = r_img->get_pixel(x,y);
@@ -36,7 +37,10 @@ void Rect::draw() {
 	for (int x = r_origin.x; x < (int)(r_origin.x + r_box_size.x); x++) {
 		for (int y = r_origin.y; y < (int)(r_origin.y + r_box_size.y); y++) {
 			r_img->set_pixel_color((ui32)x,(ui32)y,r_color);
-			add_pixel(x,y);
+			if (x == r_origin.x) { add_pixel(x,y); }
+			if (x == (int)(r_origin.x + r_box_size.x) - 1) { add_pixel(x,y); }
+			if (y == r_origin.y) { add_pixel(x,y); }
+			if (y == (int)(r_origin.y + r_box_size.y) - 1) { add_pixel(x,y); }
 		};
 	};
 	r_img->add_figure_to_cene(this);

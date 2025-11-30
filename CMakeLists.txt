@@ -5,5 +5,6 @@ project(raytrace-ppm LANGUAGES CXX)
 add_executable(raytrace-ppm
 	src/figures.cpp
 	src/image.cpp
+	src/rays.cpp
 	main.cpp
 )

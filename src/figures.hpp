@@ -1,6 +1,8 @@
 #pragma once
-#include "image.hpp"
 #include "types.hpp"
+
+class Image;
+class Pixel;
 
 class Figure {
 private:

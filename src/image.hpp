@@ -2,8 +2,7 @@
 #include <iostream>
 #include <vector>
 #include "types.hpp"
-
-class Figure;
+#include "figures.hpp"
 
 class Pixel {
 private:
