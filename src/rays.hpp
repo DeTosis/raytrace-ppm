@@ -13,6 +13,6 @@ private:
 	Color m_trace_color;
 	float m_step_size;
 public:
-	Ray(Image* img, ui32vec2 origin, int max_steps, Color trace_color, float step_size = 1);
+	Ray(Image* img, ui32vec2 origin, int max_steps, Color trace_color);
 	void cast(float angle);
 };

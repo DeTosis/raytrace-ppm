@@ -1,0 +1,26 @@
+[
+{
+  "directory": "/home/detosis/proj/raytrace-ppm/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/raytrace-ppm.dir/src/figures.cpp.o -c /home/detosis/proj/raytrace-ppm/src/figures.cpp",
+  "file": "/home/detosis/proj/raytrace-ppm/src/figures.cpp",
+  "output": "CMakeFiles/raytrace-ppm.dir/src/figures.cpp.o"
+},
+{
+  "directory": "/home/detosis/proj/raytrace-ppm/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/raytrace-ppm.dir/src/image.cpp.o -c /home/detosis/proj/raytrace-ppm/src/image.cpp",
+  "file": "/home/detosis/proj/raytrace-ppm/src/image.cpp",
+  "output": "CMakeFiles/raytrace-ppm.dir/src/image.cpp.o"
+},
+{
+  "directory": "/home/detosis/proj/raytrace-ppm/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/raytrace-ppm.dir/src/rays.cpp.o -c /home/detosis/proj/raytrace-ppm/src/rays.cpp",
+  "file": "/home/detosis/proj/raytrace-ppm/src/rays.cpp",
+  "output": "CMakeFiles/raytrace-ppm.dir/src/rays.cpp.o"
+},
+{
+  "directory": "/home/detosis/proj/raytrace-ppm/build",
+  "command": "/usr/bin/c++    -o CMakeFiles/raytrace-ppm.dir/src/main.cpp.o -c /home/detosis/proj/raytrace-ppm/src/main.cpp",
+  "file": "/home/detosis/proj/raytrace-ppm/src/main.cpp",
+  "output": "CMakeFiles/raytrace-ppm.dir/src/main.cpp.o"
+}
+]

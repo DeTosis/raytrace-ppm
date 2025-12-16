@@ -1,11 +1,10 @@
 #include "rays.hpp"
 
-Ray::Ray(Image* img, ui32vec2 origin, int max_steps, Color trace_color, float step_size) {
+Ray::Ray(Image* img, ui32vec2 origin, int max_steps, Color trace_color) {
 	m_img = img;
 	m_origin = origin;
 	m_max_steps = max_steps;
 	m_trace_color = trace_color;
-	m_step_size = step_size;
 };
 
 void Ray::cast(float angle) {
@@ -17,11 +16,11 @@ void Ray::cast(float angle) {
 
 	float rx = m_origin.x;
 	float ry = m_origin.y;
+	auto figures = m_img->get_figures();
 	for (int i = 0; i < m_max_steps; i++) {
-		rx += dx * m_step_size;
-		ry += dy * m_step_size;
+		rx += dx;
+		ry += dy;
 		if ( ry > 0 && ry < dim.y - 1 && rx > 0 && rx < dim.x - 1) {
-			auto figures = m_img->get_figures();
 			for (const auto& f : *figures) {
 				if (f->is_pixel_set(std::ceil(rx),std::ceil(ry))) {
 					return;
